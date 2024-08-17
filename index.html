@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vasista 2k24 Registration Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #f0f8ff;
+        }
+
+        .form-container {
+            background: linear-gradient(135deg, #232526, #414345);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+            width: 350px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 90deg at 50% 50%, #ff6e7f, #bfe9ff, #6a82fb, #fc6767, #ff6e7f);
+            animation: rotate 6s linear infinite;
+            z-index: 0;
+        }
+
+        .form-container::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            background: #2c3e50;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h2 {
+            color: #f39c12;
+            margin-bottom: 20px;
+            z-index: 2;
+            position: relative;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background: #34495e;
+            color: #ecf0f1;
+            z-index: 2;
+            position: relative;
+        }
+
+        input[type="submit"] {
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            z-index: 2;
+            position: relative;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #c0392b;
+        }
+
+        .success-message {
+            color: #27ae60;
+            display: none;
+            margin-top: 20px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .form-logo {
+            width: 100px;
+            margin-bottom: 20px;
+            z-index: 2;
+            position: relative;
+        }
+
+        /* Optional Animation */
+        .form-container {
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <img src="c:\Users\venka\OneDrive\Documents\Form_Event_Registration\Untitled_design.png" alt="Logo" class="form-logo">
+        <h2>Vasista 2k24 Registration Form</h2>
+        <form id="userForm" name="submit-to-google-sheet">
+            <input type="text" id="name" name="name" placeholder="Name" required><br>
+            <input type="text" id="id" name="id" placeholder="ID" required><br>
+            <input type="text" id="mobile" name="mobile" placeholder="Mobile" required><br>
+
+            <select id="year" name="year" required>
+                <option value="" disabled selected>Student Year</option>
+                <option value="P1">P1</option>
+                <option value="P2">P2</option>
+                <option value="E1">E1</option>
+                <option value="E2">E2</option>
+                <option value="E3">E3</option>
+                <option value="E4">E4</option>
+            </select><br>
+            
+            <select id="pre-events-1" name="pre-events-1" required>
+                <option value="" disabled selected>Event Team - 1</option>
+                <option value="Promotions Team">Promotions Team</option>
+                <option value="Decorations Team">Decorations Team</option>
+                <option value="Registrations Team">Registrations Team</option>
+                <option value="Pre-Events Team">Pre-Events Team</option>
+                <option value="Invitations Team">Invitations Team</option>
+                <option value="Before Events Team">Before Events Team</option>
+                <option value="Rangoli Team">Rangoli Team</option>
+                <option value="Fun Games">Fun Games</option>
+                <option value="Refreshments Team">Refreshments Team</option>
+                <option value="Water Management Team">Water Management Team</option>
+                <option value="Crowd Managenent Team">Crowd Managenent Team</option>
+                <option value="After Events Team">After Events Team</option>
+            </select><br>
+
+            <select id="pre-events-2" name="pre-events-2" required>
+                <option value="" disabled selected>Event Team - 2</option>
+                <option value="Promotions Team">Promotions Team</option>
+                <option value="Decorations Team">Decorations Team</option>
+                <option value="Registrations Team">Registrations Team</option>
+                <option value="Pre-Events Team">Pre-Events Team</option>
+                <option value="Invitations Team">Invitations Team</option>
+                <option value="Before Events Team">Before Events Team</option>
+                <option value="Rangoli Team">Rangoli Team</option>
+                <option value="Fun Games">Fun Games</option>
+                <option value="Refreshments Team">Refreshments Team</option>
+                <option value="Water Management Team">Water Management Team</option>
+                <option value="Crowd Managenent Team">Crowd Managenent Team</option>
+                <option value="After Events Team">After Events Team</option>
+            </select><br>
+
+            
+            <input type="submit" value="Submit">
+        </form>
+
+        <div class="success-message" id="successMessage">
+            Your information has been successfully submitted!
+        </div>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzIoGT_ULAer03COfIJFHkv1PO8_K3DpyGsW4GUFToby0v-DG3HnJER2cU8zJdE01sWbg/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                console.log('Success!', response)
+                document.getElementById('successMessage').style.display = 'block';
+                form.reset(); // Reset the form fields after successful submission
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+</html>
